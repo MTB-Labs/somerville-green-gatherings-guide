@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for our sustainable events guide
+				green: {
+					100: '#E6F4EA',
+					200: '#CEEAD6',
+					300: '#A9C25D',
+					400: '#4B7F52',
+					500: '#2F5233',
+				},
+				earth: {
+					100: '#F5F0E5',
+					200: '#E6DFD2',
+					300: '#D1C5A5',
+					400: '#8D7B68',
+					500: '#645646',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
