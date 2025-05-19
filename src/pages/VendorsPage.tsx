@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -316,14 +315,17 @@ const VendorsPage: React.FC = () => {
                   spanish="Si eres un negocio u organización que ofrece servicios sostenibles para eventos en Somerville o alrededores, ¡nos encantaría incluirte!"
                 />
               </p>
-              <button 
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors"
+              <a 
+                href="https://forms.gle/5yPxz2pPot8iUn6Z7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
               >
                 <BilingualText
-                  english="Submit Your Business"
-                  spanish="Registra tu Negocio"
+                  english={<>Submit Your Business <ExternalLink size={16} className="ml-1" /></>}
+                  spanish={<>Registra tu Negocio <ExternalLink size={16} className="ml-1" /></>}
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
