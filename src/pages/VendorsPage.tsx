@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -321,10 +322,9 @@ const VendorsPage: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
               >
-                <BilingualText
-                  english={<>Submit Your Business <ExternalLink size={16} className="ml-1" /></>}
-                  spanish={<>Registra tu Negocio <ExternalLink size={16} className="ml-1" /></>}
-                />
+                <span className="en-content">Submit Your Business</span>
+                <span className="es-content hidden-language">Registra tu Negocio</span>
+                <ExternalLink size={16} className="ml-1" />
               </a>
             </div>
           </div>
