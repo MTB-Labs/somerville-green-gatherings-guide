@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">
-              {language === 'en' ? 'somergreenevents' : 'somergreenevents'}
+              {language === 'en' ? 'SomerGreenEvents' : 'SomerGreenEvents'}
             </h3>
             <p className="text-sm text-green-800">
               {language === 'en'
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         
         <div className="border-t border-green-200 mt-8 pt-8 text-sm text-center">
           <p className="mb-2">
-            &copy; {new Date().getFullYear()} somergreenevents. {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+            &copy; {new Date().getFullYear()} SomerGreenEvents. {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>
           <p className="text-xs text-green-700">
             {language === 'en' ? 'Developed by' : 'Desarrollado por'}{' '}
