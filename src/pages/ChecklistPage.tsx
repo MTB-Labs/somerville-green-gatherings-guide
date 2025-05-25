@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { CheckCircle2, CheckSquare } from 'lucide-react';
+import { CheckCircle2, CheckSquare, Download } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
@@ -45,18 +45,6 @@ const ChecklistPage: React.FC = () => {
                 </p>
               }
               className="mt-4"
-            />
-            <BilingualText
-              english={
-                <p className="mt-2 text-gray-600">
-                  You can print it, copy it into a digital doc, or just use it as inspiration.
-                </p>
-              }
-              spanish={
-                <p className="mt-2 text-gray-600">
-                  Puedes imprimirla, copiarla a un documento digital o usarla como referencia.
-                </p>
-              }
             />
           </div>
         </div>
@@ -330,16 +318,22 @@ const ChecklistPage: React.FC = () => {
               
               {/* Downloadable Version */}
               <div className="text-center mt-8">
-                <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center">
+                <a 
+                  href="/green-event-checklist.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
+                >
+                  <Download size={16} className="mr-2" />
                   <BilingualText
-                    english={<>Download Printable Checklist</>}
-                    spanish={<>Descargar Lista Imprimible</>}
+                    english="Download Checklist (PDF)"
+                    spanish="Descargar lista de verificación (PDF)"
                   />
-                </button>
+                </a>
                 <p className="text-sm text-gray-600 mt-2">
                   <BilingualText
-                    english="PDF format, available in both English and Spanish"
-                    spanish="Formato PDF, disponible en inglés y español"
+                    english="Designed to use digitally — no printing needed."
+                    spanish="Diseñada para usar en digital — no es necesario imprimir."
                   />
                 </p>
               </div>

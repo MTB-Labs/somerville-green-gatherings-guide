@@ -398,6 +398,61 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* The Story Behind Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            englishTitle="The Story Behind Somerville Green Events" 
+            spanishTitle="La historia detrás de Somerville Green Events" 
+            centered={true} 
+          />
+          
+          <div className="max-w-3xl mx-auto">
+            <BilingualText
+              english={
+                <div className="space-y-4">
+                  <p>
+                    This guide was created to support all the people in our community who care about how we come together, 
+                    and how we care for our planet in the process. It's designed to be practical, welcoming, and bilingual 
+                    (English and Spanish), so more neighbors can take part and feel seen in the effort to host more sustainable celebrations.
+                  </p>
+                  <p>
+                    Jessica Saavedra, a resident of Somerville and a member of the City's Climate Ambassador Program, 
+                    combined her background in event planning, hospitality, and cultural coordination to develop this resource.
+                  </p>
+                  <p>
+                    Shaped by experiences in both Peru and the U.S. and grounded in work with local organizations like the 
+                    Somerville Arts Council, this project reflects a deep belief: that celebrations can be joyful, inclusive, 
+                    and climate-conscious, and that access to simple, practical tools can make that possible for everyone.
+                  </p>
+                </div>
+              }
+              spanish={
+                <div className="space-y-4">
+                  <p>
+                    Esta guía fue creada para acompañar a todas las personas de nuestra comunidad que valoran la forma en que 
+                    nos reunimos, y el impacto que eso puede tener en el planeta. Está pensada para ser práctica, acogedora 
+                    y bilingüe (en inglés y español), para que más vecinas y vecinos puedan participar y sentirse incluidos 
+                    en este esfuerzo por celebrar de forma más sostenible.
+                  </p>
+                  <p>
+                    Jessica Saavedra, vecina de Somerville y parte del Programa de Embajadores Climáticos, desarrolló este 
+                    recurso basándose en su experiencia en planificación de eventos, hospitalidad y coordinación cultural.
+                  </p>
+                  <p>
+                    Marcado por vivencias tanto en Perú como en Estados Unidos, y con raíces en el trabajo con organizaciones 
+                    locales como el Somerville Arts Council, este proyecto nace de una convicción: que las celebraciones pueden 
+                    ser alegres, inclusivas y sostenibles, y que tener acceso a herramientas simples y prácticas puede hacer 
+                    esa posibilidad real para todas las personas.
+                  </p>
+                </div>
+              }
+              className="prose prose-green max-w-none"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Equity Note */}
       <section className="py-16 bg-earth-100">
         <div className="container mx-auto px-4">
