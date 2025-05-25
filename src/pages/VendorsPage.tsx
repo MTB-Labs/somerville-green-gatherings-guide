@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
-import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package } from 'lucide-react';
+import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package, Camera, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
 
-type VendorCategory = 'all' | 'catering' | 'rentals' | 'waste' | 'decor' | 'artists' | 'products';
+type VendorCategory = 'all' | 'catering' | 'photo-video' | 'products' | 'other';
 
 const VendorsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,126 +24,150 @@ const VendorsPage: React.FC = () => {
   }, []);
 
   const vendors = [
+    // Catering
     {
       id: 1,
-      nameEn: "Julie's Kitchen",
-      nameEs: "Julie's Kitchen",
+      nameEn: "Koshari Mama",
+      nameEs: "Koshari Mama",
       category: 'catering',
-      descriptionEn: "Plant-forward, zero-waste catering. Local produce, fully compostable setup.",
-      descriptionEs: "Catering sin desperdicio, basado en plantas. Ingredientes locales y materiales compostables.",
-      website: "www.julieskitchen.com",
+      descriptionEn: "585 Somerville Ave, Somerville MA 02143",
+      descriptionEs: "585 Somerville Ave, Somerville MA 02143",
+      website: "www.kosharimama.com",
       icon: <UtensilsCrossed size={28} />
     },
     {
       id: 2,
-      nameEn: "Tierra Viva Foods",
-      nameEs: "Tierra Viva Foods",
+      nameEn: "Carolicious",
+      nameEs: "Carolicious",
       category: 'catering',
-      descriptionEn: "Latinx-owned catering business offering vegan and vegetarian Latin American menus.",
-      descriptionEs: "Negocio de catering latino con menús veganos y vegetarianos de América Latina.",
-      website: "www.tierravivafoods.com",
+      descriptionEn: "6 Bow Market Way, Somerville, MA 02143",
+      descriptionEs: "6 Bow Market Way, Somerville, MA 02143",
+      website: "www.carolicious.net",
       icon: <UtensilsCrossed size={28} />
     },
     {
       id: 3,
-      nameEn: "Simple Gatherings Rentals",
-      nameEs: "Simple Gatherings Rentals",
-      category: 'rentals',
-      descriptionEn: "Reusable dishware, tables, solar lights. Delivery available.",
-      descriptionEs: "Alquiler de vajilla, mesas e iluminación solar. Entrega incluida.",
-      website: "www.simplegatherings.com",
-      icon: <ShoppingBag size={28} />
+      nameEn: "Tasty Mo:Mo",
+      nameEs: "Tasty Mo:Mo",
+      category: 'catering',
+      descriptionEn: "508 Medford St, Somerville, MA 02145",
+      descriptionEs: "508 Medford St, Somerville, MA 02145",
+      website: "tastymomo.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 4,
-      nameEn: "Loop Party Rentals",
-      nameEs: "Loop Party Rentals",
-      category: 'rentals',
-      descriptionEn: "Circular economy-based rentals. Everything is reused, cleaned, and returned.",
-      descriptionEs: "Alquileres basados en economía circular. Todo se reutiliza, limpia y regresa.",
-      website: "www.loopparty.com",
-      icon: <ShoppingBag size={28} />
+      nameEn: "Lotus Xpress",
+      nameEs: "Lotus Xpress",
+      category: 'catering',
+      descriptionEn: "167 Broadway, Somerville, MA 02145",
+      descriptionEs: "167 Broadway, Somerville, MA 02145",
+      website: "lotusxpressma.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 5,
-      nameEn: "Bootstrap Compost",
-      nameEs: "Bootstrap Compost",
-      category: 'waste',
-      descriptionEn: "Compost pickup for events, waste tracking reports included.",
-      descriptionEs: "Recolección de compost para eventos, con reportes de residuos.",
-      website: "www.bootstrapcompost.com",
-      icon: <Leaf size={28} />
+      nameEn: "Dave's Fresh Pasta",
+      nameEs: "Dave's Fresh Pasta",
+      category: 'catering',
+      descriptionEn: "81 Holland St, Somerville, MA 02144",
+      descriptionEs: "81 Holland St, Somerville, MA 02144",
+      website: "www.davesfreshpasta.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 6,
-      nameEn: "Waste Wise",
-      nameEs: "Waste Wise",
-      category: 'waste',
-      descriptionEn: "Zero-waste event consulting, bin rentals, and staff support.",
-      descriptionEs: "Asesoría para eventos sin residuos, alquiler de botes y asistencia en sitio.",
-      website: "www.wastewiseevents.com",
-      icon: <Leaf size={28} />
+      nameEn: "Tipping Cow Ice Cream",
+      nameEs: "Tipping Cow Ice Cream",
+      category: 'catering',
+      descriptionEn: "415 Medford St, Somerville MA 02145",
+      descriptionEs: "415 Medford St, Somerville MA 02145",
+      website: "www.tippingcowicecream.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 7,
-      nameEn: "EcoFlora Events",
-      nameEs: "EcoFlora Events",
-      category: 'decor',
-      descriptionEn: "Florals with native, seasonal plants. Reusable vases and low-impact design.",
-      descriptionEs: "Arreglos florales con plantas nativas y de temporada. Diseño de bajo impacto.",
-      website: "www.ecofloraevents.com",
-      icon: <Palette size={28} />
+      nameEn: "Greencrab.org",
+      nameEs: "Greencrab.org",
+      category: 'catering',
+      descriptionEn: "101 School St, Somerville MA 02143",
+      descriptionEs: "101 School St, Somerville MA 02143",
+      website: "www.greencrab.org",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 8,
-      nameEn: "Upcycled Party Co.",
-      nameEs: "Upcycled Party Co.",
-      category: 'decor',
-      descriptionEn: "Party decorations made from recycled, secondhand, or natural materials.",
-      descriptionEs: "Decoraciones hechas con materiales reciclados, reutilizados o naturales.",
-      website: "www.upcycledparty.com",
-      icon: <Palette size={28} />
+      nameEn: "Tasting Counter",
+      nameEs: "Tasting Counter",
+      category: 'catering',
+      descriptionEn: "14 Tyler Street, Somerville MA 02143",
+      descriptionEs: "14 Tyler Street, Somerville MA 02143",
+      website: "tastingcounter.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 9,
-      nameEn: "The Upcycle Collective",
-      nameEs: "The Upcycle Collective",
-      category: 'artists',
-      descriptionEn: "Stage and installation artists using repurposed materials.",
-      descriptionEs: "Artistas escénicos que trabajan con materiales reutilizados.",
-      website: "www.upcyclecollective.org",
-      icon: <Music size={28} />
+      nameEn: "Mei Mei Dumplings",
+      nameEs: "Mei Mei Dumplings",
+      category: 'catering',
+      descriptionEn: "58 Old Colony Ave, Boston MA 02127 | (857) 250-4959",
+      descriptionEs: "58 Old Colony Ave, Boston MA 02127 | (857) 250-4959",
+      website: "meimeidumplings.com",
+      icon: <UtensilsCrossed size={28} />
     },
     {
       id: 10,
-      nameEn: "EcoSound DJ",
-      nameEs: "EcoSound DJ",
-      category: 'artists',
-      descriptionEn: "Low-energy sound systems, playlists with community & culture focus.",
-      descriptionEs: "Equipos de sonido de bajo consumo, música con enfoque comunitario.",
-      website: "www.ecosounddj.com",
-      icon: <Music size={28} />
+      nameEn: "Chappy's Pickles LLC",
+      nameEs: "Chappy's Pickles LLC",
+      category: 'catering',
+      descriptionEn: "32 Cambridge St, Charlestown MA 02129",
+      descriptionEs: "32 Cambridge St, Charlestown MA 02129",
+      website: "chappyspickles.com",
+      icon: <UtensilsCrossed size={28} />
     },
+    // Photo / Video
     {
       id: 11,
-      nameEn: "Uvida Zero Waste Shop",
-      nameEs: "Uvida Zero Waste Shop",
-      category: 'products',
-      descriptionEn: "Bulk snacks, compostables, and reusable party supplies.",
-      descriptionEs: "Snacks a granel, productos compostables y utensilios reutilizables para fiestas.",
-      website: "www.uvidashop.com",
-      icon: <Package size={28} />
+      nameEn: "Family Ties Media LLC ★",
+      nameEs: "Family Ties Media LLC ★",
+      category: 'photo-video',
+      descriptionEn: "25 Walnut Road, Somerville MA 02145 | (617) 834-8986",
+      descriptionEs: "25 Walnut Road, Somerville MA 02145 | (617) 834-8986",
+      website: "www.familytiesmedia.com",
+      icon: <Camera size={28} />
     },
+    // Products
     {
       id: 12,
-      nameEn: "The Jar Lady",
-      nameEs: "The Jar Lady",
+      nameEn: "Picnic & Pantry",
+      nameEs: "Picnic & Pantry",
       category: 'products',
-      descriptionEn: "Rentable mason jar kits for parties (cups, decor, favors).",
-      descriptionEs: "Kits de frascos reutilizables para fiestas (vasos, decoración, recuerdos).",
-      website: "www.thejarlady.com",
+      descriptionEn: "1 Bow Market Way, Unit 3, Somerville MA 02143",
+      descriptionEs: "1 Bow Market Way, Unit 3, Somerville MA 02143",
+      website: "www.instagram.com/picnicandpantrysomerville",
       icon: <Package size={28} />
     },
+    // Other vendors
+    {
+      id: 13,
+      nameEn: "Somerville Sustainable Cleaning, LLC",
+      nameEs: "Somerville Sustainable Cleaning, LLC",
+      category: 'other',
+      descriptionEn: "18 Dorrance Street, Unit #2, Boston MA 02129 | (617) 547-0450",
+      descriptionEs: "18 Dorrance Street, Unit #2, Boston MA 02129 | (617) 547-0450",
+      website: "somervillecleaning.com",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 14,
+      nameEn: "Serenity Wellness Massage ★",
+      nameEs: "Serenity Wellness Massage ★",
+      category: 'other',
+      descriptionEn: "62 Summer St, Somerville MA 02143",
+      descriptionEs: "62 Summer St, Somerville MA 02143",
+      website: "www.serenitywellnessmassage.com",
+      icon: <Palette size={28} />
+    }
   ];
 
   const filteredVendors = vendors.filter(vendor => {
@@ -161,21 +184,17 @@ const VendorsPage: React.FC = () => {
   const categoryLabels = {
     all: { en: 'All Vendors', es: 'Todos los Proveedores' },
     catering: { en: 'Catering', es: 'Catering' },
-    rentals: { en: 'Rentals', es: 'Alquileres' },
-    waste: { en: 'Waste Services', es: 'Gestión de Residuos' },
-    decor: { en: 'Decor', es: 'Decoración' },
-    artists: { en: 'Artists & Performers', es: 'Artistas y Músicos' },
+    'photo-video': { en: 'Photo & Video', es: 'Foto y Video' },
     products: { en: 'Products', es: 'Productos' },
+    other: { en: 'Other Services', es: 'Otros Servicios' },
   };
 
   const getCategoryIcon = (category: VendorCategory) => {
     switch(category) {
       case 'catering': return <UtensilsCrossed size={20} />;
-      case 'rentals': return <ShoppingBag size={20} />;
-      case 'waste': return <Leaf size={20} />;
-      case 'decor': return <Palette size={20} />;
-      case 'artists': return <Music size={20} />;
+      case 'photo-video': return <Camera size={20} />;
       case 'products': return <Package size={20} />;
+      case 'other': return <Leaf size={20} />;
       default: return null;
     }
   };
