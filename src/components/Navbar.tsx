@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange }) => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-green-500 font-bold text-xl md:text-2xl font-montserrat">SomGreenEvents</span>
+                <span className="text-green-500 font-bold text-xl md:text-2xl font-montserrat">somergreenevents</span>
               </Link>
             </div>
           </div>

@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">
-              {language === 'en' ? 'SomGreenEvents' : 'SomGreenEvents'}
+              {language === 'en' ? 'somergreenevents' : 'somergreenevents'}
             </h3>
             <p className="text-sm text-green-800">
               {language === 'en'
@@ -70,8 +70,8 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             </h3>
             <div className="flex items-center text-sm mb-3">
               <Mail size={16} className="mr-2" />
-              <a href="mailto:contact@somgreenevents.org" className="hover:underline">
-                contact@somgreenevents.org
+              <a href="mailto:somergreenevents@gmail.com" className="hover:underline">
+                somergreenevents@gmail.com
               </a>
             </div>
             <div className="flex items-center text-sm">
@@ -86,8 +86,19 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         </div>
         
         <div className="border-t border-green-200 mt-8 pt-8 text-sm text-center">
-          <p>
-            &copy; {new Date().getFullYear()} SomGreenEvents. {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+          <p className="mb-2">
+            &copy; {new Date().getFullYear()} somergreenevents. {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+          </p>
+          <p className="text-xs text-green-700">
+            {language === 'en' ? 'Developed by' : 'Desarrollado por'}{' '}
+            <a 
+              href="https://mtb-labs.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:underline font-medium"
+            >
+              MTB Labs
+            </a>
           </p>
         </div>
       </div>
