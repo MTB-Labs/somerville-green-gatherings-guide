@@ -1,10 +1,11 @@
+
 import React, { useEffect, useState } from 'react';
-import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package, Camera, MapPin } from 'lucide-react';
+import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package, Camera, MapPin, Building } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
 
-type VendorCategory = 'all' | 'catering' | 'photo-video' | 'products' | 'other';
+type VendorCategory = 'all' | 'catering' | 'photo-video' | 'products' | 'venues' | 'other';
 
 const VendorsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -186,6 +187,7 @@ const VendorsPage: React.FC = () => {
     catering: { en: 'Catering', es: 'Catering' },
     'photo-video': { en: 'Photo & Video', es: 'Foto y Video' },
     products: { en: 'Products', es: 'Productos' },
+    venues: { en: 'Venues', es: 'Locales' },
     other: { en: 'Other Services', es: 'Otros Servicios' },
   };
 
@@ -194,6 +196,7 @@ const VendorsPage: React.FC = () => {
       case 'catering': return <UtensilsCrossed size={20} />;
       case 'photo-video': return <Camera size={20} />;
       case 'products': return <Package size={20} />;
+      case 'venues': return <Building size={20} />;
       case 'other': return <Leaf size={20} />;
       default: return null;
     }
@@ -202,9 +205,16 @@ const VendorsPage: React.FC = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-100 to-white py-12">
+      <section className="bg-gradient-to-b from-stone-50 to-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-green-500 mb-4">
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/3e45ed32-f579-4242-b8a8-a9e5a0d725bc.png" 
+              alt="Somerville Green Events Logo" 
+              className="mx-auto h-32 w-auto"
+            />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-green-600 mb-4">
             <BilingualText
               english="Sustainable Event Vendors Directory"
               spanish="Directorio de Proveedores para Eventos Sostenibles"
@@ -240,7 +250,7 @@ const VendorsPage: React.FC = () => {
                 </div>
                 <input 
                   type="text" 
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   placeholder="Search vendors..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -256,8 +266,8 @@ const VendorsPage: React.FC = () => {
                       onClick={() => setActiveCategory(category as VendorCategory)}
                       className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center whitespace-nowrap ${
                         activeCategory === category 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          ? 'bg-green-600 text-white' 
+                          : 'bg-stone-100 text-gray-700 hover:bg-stone-200'
                       }`}
                     >
                       {getCategoryIcon(category as VendorCategory)}
@@ -275,7 +285,7 @@ const VendorsPage: React.FC = () => {
       </section>
       
       {/* Vendors Listing */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {filteredVendors.length > 0 ? (
@@ -285,7 +295,7 @@ const VendorsPage: React.FC = () => {
                     <div className="p-6">
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-green-500 mb-2">
+                          <h3 className="text-xl font-semibold text-green-600 mb-2">
                             <span className="en-content">{vendor.nameEn}</span>
                             <span className="es-content hidden-language">{vendor.nameEs}</span>
                           </h3>
@@ -297,12 +307,12 @@ const VendorsPage: React.FC = () => {
                             href={`https://${vendor.website}`} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="inline-flex items-center text-green-600 hover:text-green-700"
+                            className="inline-flex items-center text-green-700 hover:text-green-800"
                           >
                             {vendor.website} <ExternalLink size={14} className="ml-1" />
                           </a>
                         </div>
-                        <div className="p-2 bg-green-100 rounded-md text-green-500 ml-4">
+                        <div className="p-2 bg-stone-100 rounded-md text-green-600 ml-4">
                           {vendor.icon}
                         </div>
                       </div>
@@ -322,14 +332,14 @@ const VendorsPage: React.FC = () => {
             )}
             
             {/* Vendor Application */}
-            <div className="mt-16 bg-earth-100 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-semibold text-earth-500 mb-4">
+            <div className="mt-16 bg-amber-50 rounded-lg p-8 text-center border border-amber-200">
+              <h3 className="text-2xl font-semibold text-green-600 mb-4">
                 <BilingualText
                   english="Want to be listed here?"
                   spanish="¿Quieres aparecer aquí?"
                 />
               </h3>
-              <p className="text-earth-700 max-w-2xl mx-auto mb-6">
+              <p className="text-gray-700 max-w-2xl mx-auto mb-6">
                 <BilingualText
                   english="If you're a business or organization offering sustainable event services in Somerville or nearby, we'd love to include you!"
                   spanish="Si eres un negocio u organización que ofrece servicios sostenibles para eventos en Somerville o alrededores, ¡nos encantaría incluirte!"
@@ -339,11 +349,11 @@ const VendorsPage: React.FC = () => {
                 href="https://forms.gle/5yPxz2pPot8iUn6Z7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
+                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
               >
                 <span className="en-content">Submit Your Business</span>
                 <span className="es-content hidden-language">Registra tu Negocio</span>
-                <ExternalLink size={16} className="ml-1" />
+                <ExternalLink size={16} className="ml-2" />
               </a>
             </div>
           </div>
