@@ -110,8 +110,8 @@ const VendorsPage: React.FC = () => {
       nameEn: "Mei Mei Dumplings",
       nameEs: "Mei Mei Dumplings",
       category: 'catering',
-      descriptionEn: "58 Old Colony Ave, Boston MA 02127 | (857) 250-4959",
-      descriptionEs: "58 Old Colony Ave, Boston MA 02127 | (857) 250-4959",
+      descriptionEn: "58 Old Colony Ave, Boston MA 02127",
+      descriptionEs: "58 Old Colony Ave, Boston MA 02127",
       website: "meimeidumplings.com",
       icon: <UtensilsCrossed size={28} />
     },
@@ -131,8 +131,8 @@ const VendorsPage: React.FC = () => {
       nameEn: "Family Ties Media LLC ★",
       nameEs: "Family Ties Media LLC ★",
       category: 'photo-video',
-      descriptionEn: "25 Walnut Road, Somerville MA 02145 | (617) 834-8986",
-      descriptionEs: "25 Walnut Road, Somerville MA 02145 | (617) 834-8986",
+      descriptionEn: "25 Walnut Road, Somerville MA 02145",
+      descriptionEs: "25 Walnut Road, Somerville MA 02145",
       website: "www.familytiesmedia.com",
       icon: <Camera size={28} />
     },
@@ -153,8 +153,8 @@ const VendorsPage: React.FC = () => {
       nameEn: "Somerville Sustainable Cleaning, LLC",
       nameEs: "Somerville Sustainable Cleaning, LLC",
       category: 'other',
-      descriptionEn: "18 Dorrance Street, Unit #2, Boston MA 02129 | (617) 547-0450",
-      descriptionEs: "18 Dorrance Street, Unit #2, Boston MA 02129 | (617) 547-0450",
+      descriptionEn: "18 Dorrance Street, Unit #2, Boston MA 02129",
+      descriptionEs: "18 Dorrance Street, Unit #2, Boston MA 02129",
       website: "somervillecleaning.com",
       icon: <Leaf size={28} />
     },

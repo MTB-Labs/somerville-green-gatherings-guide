@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../images/SomerGreenEvents Logo.png';
 
 interface NavbarProps {
   language: 'en' | 'es';
@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange }) => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-green-500 font-bold text-xl md:text-2xl font-montserrat">SomerGreenEvents</span>
+                <img src={logo} alt="SomerGreenEvents logo" className="h-10 w-auto" />
               </Link>
             </div>
           </div>
