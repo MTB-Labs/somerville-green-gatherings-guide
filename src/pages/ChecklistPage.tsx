@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { CheckCircle2, CheckSquare, Download } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -18,6 +17,12 @@ const ChecklistPage: React.FC = () => {
       el.classList.remove('hidden-language');
     });
   }, []);
+
+  // Determine download URL based on language
+  const language = localStorage.getItem('preferred-language') || 'en';
+  const downloadUrl = language === 'es'
+    ? '/files/PDF_Spanish_SomerGreenEvents.pdf'
+    : '/files/PDF_English_SomerGreenEvents.pdf';
 
   return (
     <Layout>
@@ -319,7 +324,7 @@ const ChecklistPage: React.FC = () => {
               {/* Downloadable Version */}
               <div className="text-center mt-8">
                 <a 
-                  href="/green-event-checklist.pdf"
+                  href={downloadUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
