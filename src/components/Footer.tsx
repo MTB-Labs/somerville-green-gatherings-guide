@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Leaf, Mail } from 'lucide-react';
-import logo from '../images/SomerGreenEvents Logo.png';
 
 interface FooterProps {
   language: 'en' | 'es';
@@ -13,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img src={logo} alt="SomerGreenEvents logo" style={{ width: 150, height: 'auto' }} className="mb-2" />
+            <img src="/images/SomerGreenEvents Logo.png" alt="SomerGreenEvents logo" style={{ width: 150, height: 'auto' }} className="mb-2" />
             <p className="text-sm text-green-800">
               {language === 'en'
                 ? 'Celebrate With Purpose: A Bilingual Guide to Sustainable Events in Somerville'
