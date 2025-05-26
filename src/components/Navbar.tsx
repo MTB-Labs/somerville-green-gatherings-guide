@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange }) => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <img src={logo} alt="SomerGreenEvents logo" className="h-10 w-auto" />
+                <img src={logo} alt="SomerGreenEvents logo" style={{ width: 150, height: 'auto' }} className="h-10 w-auto" />
               </Link>
             </div>
           </div>

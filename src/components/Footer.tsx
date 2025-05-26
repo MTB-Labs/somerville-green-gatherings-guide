@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img src={logo} alt="SomerGreenEvents logo" className="h-10 w-auto mb-2" />
+            <img src={logo} alt="SomerGreenEvents logo" style={{ width: 150, height: 'auto' }} className="mb-2" />
             <p className="text-sm text-green-800">
               {language === 'en'
                 ? 'Celebrate With Purpose: A Bilingual Guide to Sustainable Events in Somerville'
@@ -85,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         
         <div className="border-t border-green-200 mt-8 pt-8 text-sm text-center">
           <p className="mb-2 flex items-center justify-center gap-2">
-            <img src={logo} alt="SomerGreenEvents logo" className="h-6 w-auto inline-block align-middle" />
+            SomerGreenEvents
             &copy; {new Date().getFullYear()} {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>
           <p className="text-xs text-green-700">
