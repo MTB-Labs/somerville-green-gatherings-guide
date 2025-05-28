@@ -469,6 +469,299 @@ const PlanningPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Traditional vs Sustainable Events Comparison */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            englishTitle="Traditional vs. Sustainable Events" 
+            spanishTitle="Eventos tradicionales vs. Eventos sostenibles" 
+            centered={true} 
+          />
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="p-4 text-left font-semibold text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Event Element"
+                        spanish="Elemento del evento"
+                      />
+                    </th>
+                    <th className="p-4 text-left font-semibold text-gray-600 border-b border-green-200">
+                      <BilingualText
+                        english="Traditional Events"
+                        spanish="Eventos tradicionales"
+                      />
+                    </th>
+                    <th className="p-4 text-left font-semibold text-green-600 border-b border-green-200">
+                      <BilingualText
+                        english="Sustainable Events"
+                        spanish="Eventos sostenibles"
+                      />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Food & Catering */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Food & Catering"
+                        spanish="Comida y catering"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Disposable plates, bottled water, meat-heavy menus"
+                        spanish="Platos desechables, botellas de agua, menú con mucha carne"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Reusable dishware, refill stations, plant-based or local menus"
+                        spanish="Platos reutilizables, estaciones de agua, menú local o a base de plantas"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Decorations */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Decorations"
+                        spanish="Decoración"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Balloons, plastic tablecloths, single-use banners"
+                        spanish="Globos, manteles plásticos, carteles descartables"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Upcycled or reusable decor, natural elements"
+                        spanish="Decoración reutilizada o natural (plantas, telas, flores)"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Invitations & Promotion */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Invitations & Promotion"
+                        spanish="Invitaciones y promoción"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Printed flyers, paper invites"
+                        spanish="Volantes e invitaciones impresas"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Digital invites, social media, QR codes"
+                        spanish="Invitaciones digitales, redes sociales, códigos QR"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Waste Management */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Waste Management"
+                        spanish="Gestión de residuos"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="No sorting, everything goes in trash"
+                        spanish="Sin separación, todo a la basura"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Clear bins: compost, recycling, trash"
+                        spanish="Contenedores bien señalizados: compost, reciclaje, basura"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Transportation */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Transportation"
+                        spanish="Transporte"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Everyone drives, focused on parking"
+                        spanish="Todos llegan en auto, prioridad al estacionamiento"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Walk, bike, public transit, carpools, shared rides"
+                        spanish="Caminar, bici, transporte público, viajes compartidos"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Event Venue */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Event Venue"
+                        spanish="Lugar del evento"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="No environmental policy, high energy use"
+                        spanish="Sin política ambiental, alto consumo de energía"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Energy-efficient, compost/recycling options, accessible location"
+                        spanish="Edificio eficiente, compost/reciclaje, ubicación accesible"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Performers & Vendors */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Performers & Vendors"
+                        spanish="Artistas y proveedores"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Hired for cost/convenience only"
+                        spanish="Elegidos por precio o facilidad"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Local, inclusive, sustainability-aware"
+                        spanish="Locales, inclusivos, con enfoque sostenible"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Photo & Video */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Photo & Video"
+                        spanish="Foto y video"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Printed albums, DVDs, high-impact setup"
+                        spanish="Álbumes impresos, DVDs, mucho equipo y consumo"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Digital-only, minimal gear, local providers"
+                        spanish="Entrega digital, poco equipo, proveedores locales"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Gifts & Giveaways */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Gifts & Giveaways"
+                        spanish="Recuerdos y regalos"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Plastic favors, single-use items"
+                        spanish="Souvenirs plásticos, objetos de un solo uso"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Useful, edible, handmade, or none"
+                        spanish="Útiles, comestibles, artesanales o sin regalos"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Outfits */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Outfits (Guests & Hosts)"
+                        spanish="Vestimenta (anfitriones e invitados)"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Bought new, worn once"
+                        spanish="Comprada para la ocasión, no se reutiliza"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Rented, thrifted, re-wearable, borrowed"
+                        spanish="Alquilada, de segunda mano, reutilizable o prestada"
+                      />
+                    </td>
+                  </tr>
+
+                  {/* Overall Impact */}
+                  <tr className="hover:bg-green-50">
+                    <td className="p-4 font-medium text-green-800 border-b border-green-200">
+                      <BilingualText
+                        english="Overall Impact"
+                        spanish="Impacto general"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="High waste and carbon footprint"
+                        spanish="Muchos residuos y alto impacto"
+                      />
+                    </td>
+                    <td className="p-4 text-gray-700 border-b border-green-200">
+                      <BilingualText
+                        english="Less waste, more intention and connection"
+                        spanish="Menos residuos, más intención y comunidad"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Final Note */}
+            <div className="mt-12 text-center">
+              <p className="text-lg text-gray-700 italic">
+                <BilingualText
+                  english="Every celebration is a chance to reflect our values. Even small choices can make a big difference."
+                  spanish="Cada celebración es una oportunidad para reflejar nuestros valores. Hasta los cambios pequeños pueden tener un gran impacto."
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
