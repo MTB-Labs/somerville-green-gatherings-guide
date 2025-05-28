@@ -31,6 +31,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     document.querySelectorAll(`.${lang}-content`).forEach(el => {
       el.classList.remove('hidden-language');
     });
+
+    // Dispatch custom event for components that need to react to language changes
+    window.dispatchEvent(new CustomEvent('languageChange', { detail: { language: lang } }));
   };
 
   return (

@@ -1,28 +1,57 @@
-import React, { useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { CheckCircle2, CheckSquare, Download } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
 
 const ChecklistPage: React.FC = () => {
-  // Set initial language content visibility
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('preferred-language') || 'en';
-    
-    document.querySelectorAll('.en-content, .es-content').forEach(el => {
-      el.classList.add('hidden-language');
-    });
-    
-    document.querySelectorAll(`.${savedLanguage}-content`).forEach(el => {
-      el.classList.remove('hidden-language');
-    });
-  }, []);
+  const [downloadUrl, setDownloadUrl] = useState('');
 
-  // Determine download URL based on language
-  const language = localStorage.getItem('preferred-language') || 'en';
-  const downloadUrl = language === 'es'
-    ? '/files/PDF_Spanish_SomerGreenEvents.pdf'
-    : '/files/PDF_English_SomerGreenEvents.pdf';
+  // Set initial language content visibility and download URL
+  useEffect(() => {
+    const updateLanguageContent = () => {
+      const savedLanguage = localStorage.getItem('preferred-language') || 'en';
+      
+      document.querySelectorAll('.en-content, .es-content').forEach(el => {
+        el.classList.add('hidden-language');
+      });
+      
+      document.querySelectorAll(`.${savedLanguage}-content`).forEach(el => {
+        el.classList.remove('hidden-language');
+      });
+
+      // Update download URL based on current language
+      const newDownloadUrl = savedLanguage === 'es'
+        ? '/files/PDF_Spanish_SomerGreenEvents.pdf'
+        : '/files/PDF_English_SomerGreenEvents.pdf';
+      setDownloadUrl(newDownloadUrl);
+    };
+
+    // Initial setup
+    updateLanguageContent();
+
+    // Listen for storage changes (when language is changed in navbar)
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'preferred-language') {
+        updateLanguageContent();
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    // Also listen for custom language change events within the same window
+    const handleLanguageChange = () => {
+      updateLanguageContent();
+    };
+
+    window.addEventListener('languageChange', handleLanguageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('languageChange', handleLanguageChange);
+    };
+  }, []);
 
   return (
     <Layout>
