@@ -10,16 +10,20 @@ const HomePage: React.FC = () => {
   
   const slides = [
     {
-      image: "/images/PlantBased&LocalMenus2_Credits_Canva.webp",
-      alt: "Sustainable event celebration with local food"
+      image: "/images/DigitalInvites2_Credits_Canva_SAC.webp",
+      alt: "Digital invitation example"
     },
     {
       image: "/images/UpcycledReusableDecor&Dishware_Credits_Canva.webp",
       alt: "Sustainable venue setup with reusable decor"
     },
     {
-      image: "/images/BuyLocal_Credits_EdibleBoston_NibbleKitchen.webp",
-      alt: "Local food and sustainable practices"
+      image: "/images/PlantBased&LocalMenus1_Credits_Canva.webp",
+      alt: "Sustainable event celebration with local food"
+    },
+    {
+      image: "/images/EventWasteManagement_Credits_TheNews&Observers.webp",
+      alt: "Event waste management"
     },
     {
       image: "/images/UsefulFavors_Credits_Canva.webp",
