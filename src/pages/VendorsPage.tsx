@@ -284,7 +284,7 @@ const VendorsPage: React.FC = () => {
                 {filteredVendors.map(vendor => (
                   <div key={vendor.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="p-4 sm:p-6">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                      <div className="flex items-start justify-between gap-4">
                         <div className="flex-1 min-w-0">
                           <h3 className="text-lg sm:text-xl font-semibold text-green-500 mb-2 break-words">
                             <span className="en-content">{vendor.nameEn}</span>
@@ -306,7 +306,7 @@ const VendorsPage: React.FC = () => {
                             </a>
                           </div>
                         </div>
-                        <div className="p-2 bg-green-100 rounded-md text-green-500 self-start flex-shrink-0">
+                        <div className="p-2 bg-green-100 rounded-md text-green-500 flex-shrink-0">
                           {vendor.icon}
                         </div>
                       </div>
