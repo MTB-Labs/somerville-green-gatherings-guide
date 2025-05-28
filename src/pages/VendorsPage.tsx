@@ -280,30 +280,33 @@ const VendorsPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {filteredVendors.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {filteredVendors.map(vendor => (
                   <div key={vendor.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="p-6">
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-green-500 mb-2">
+                    <div className="p-4 sm:p-6">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg sm:text-xl font-semibold text-green-500 mb-2 break-words">
                             <span className="en-content">{vendor.nameEn}</span>
                             <span className="es-content hidden-language">{vendor.nameEs}</span>
                           </h3>
-                          <p className="text-gray-600 mb-4">
+                          <p className="text-gray-600 mb-4 text-sm sm:text-base break-words">
                             <span className="en-content">{vendor.descriptionEn}</span>
                             <span className="es-content hidden-language">{vendor.descriptionEs}</span>
                           </p>
-                          <a 
-                            href={`https://${vendor.website}`} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-green-600 hover:text-green-700"
-                          >
-                            {vendor.website} <ExternalLink size={14} className="ml-1" />
-                          </a>
+                          <div className="break-all">
+                            <a 
+                              href={`https://${vendor.website}`} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-green-600 hover:text-green-700 text-sm sm:text-base"
+                            >
+                              <span className="break-all">{vendor.website}</span>
+                              <ExternalLink size={14} className="ml-1 flex-shrink-0" />
+                            </a>
+                          </div>
                         </div>
-                        <div className="p-2 bg-green-100 rounded-md text-green-500 ml-4">
+                        <div className="p-2 bg-green-100 rounded-md text-green-500 self-start flex-shrink-0">
                           {vendor.icon}
                         </div>
                       </div>
