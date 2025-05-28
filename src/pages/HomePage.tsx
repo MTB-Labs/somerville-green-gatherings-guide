@@ -1,11 +1,48 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Users, Leaf, CheckSquare, ShoppingBag } from 'lucide-react';
+import { Calendar, Users, Leaf, CheckSquare, ShoppingBag, ChevronLeft, ChevronRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
 
 const HomePage: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const slides = [
+    {
+      image: "/images/PlantBased&LocalMenus2_Credits_Canva.webp",
+      alt: "Sustainable event celebration with local food"
+    },
+    {
+      image: "/images/UpcycledReusableDecor&Dishware_Credits_Canva.webp",
+      alt: "Sustainable venue setup with reusable decor"
+    },
+    {
+      image: "/images/BuyLocal_Credits_EdibleBoston_NibbleKitchen.webp",
+      alt: "Local food and sustainable practices"
+    },
+    {
+      image: "/images/UsefulFavors_Credits_Canva.webp",
+      alt: "Sustainable event favors"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   // Set initial language content visibility
   useEffect(() => {
     // Check for user preference, otherwise show English by default
@@ -23,14 +60,35 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-100 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-6">
+      <section className="relative h-[90dvh] flex items-center">
+        {/* Background Slider */}
+        <div className="absolute inset-0">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-full object-cover"
+              />
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+            </div>
+          ))}
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="en-content">Celebrate With Purpose</span>
               <span className="es-content hidden-language">Celebra con Propósito</span>
             </h1>
-            <p className="text-xl md:text-2xl text-earth-500 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               <span className="en-content">
                 A Bilingual Guide to Sustainable Events in Somerville
               </span>
@@ -41,20 +99,50 @@ const HomePage: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/planning"
-                className="bg-green-400 hover:bg-green-500 text-white px-6 py-3 rounded-md font-medium transition-colors"
+                className="bg-green-400 hover:bg-green-500 text-white px-8 py-4 rounded-md font-medium transition-colors text-lg"
               >
                 <span className="en-content">Start Planning</span>
                 <span className="es-content hidden-language">Comienza a Planificar</span>
               </Link>
               <Link
                 to="/vendors"
-                className="bg-white hover:bg-gray-100 text-green-500 border border-green-400 px-6 py-3 rounded-md font-medium transition-colors"
+                className="bg-white/90 hover:bg-white text-green-500 border border-white px-8 py-4 rounded-md font-medium transition-colors text-lg"
               >
                 <span className="en-content">Find Green Vendors</span>
                 <span className="es-content hidden-language">Encuentra Proveedores Verdes</span>
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-3 rounded-full shadow-lg transition-colors z-20"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-8 h-8 text-white" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-3 rounded-full shadow-lg transition-colors z-20"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-8 h-8 text-white" />
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -68,13 +156,6 @@ const HomePage: React.FC = () => {
           />
           
           <div className="max-w-3xl mx-auto">
-            <div className="mb-8">
-              <img 
-                src="/images/PlantBased&LocalMenus2_Credits_Canva.webp" 
-                alt="Sustainable event celebration" 
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
-            </div>
             <BilingualText
               english={
                 <div className="space-y-4">
@@ -507,18 +588,18 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <img 
                   src="/images/BuyLocal_Credits_EdibleBoston_NibbleKitchen.webp" 
                   alt="Local food and sustainable practices" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 />
               </div>
-              <div>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <img 
                   src="/images/UsefulFavors_Credits_Canva.webp" 
                   alt="Sustainable event favors" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 />
               </div>
             </div>
@@ -568,11 +649,13 @@ const HomePage: React.FC = () => {
             </h2>
 
             <div className="mb-8">
-              <img 
-                src="/images/PlantBased&LocalMenus3_Credits_Canva.webp" 
-                alt="Various sustainable events" 
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <img 
+                  src="/images/PlantBased&LocalMenus3_Credits_Canva.webp" 
+                  alt="Various sustainable events" 
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
+                />
+              </div>
             </div>
 
             <BilingualText
