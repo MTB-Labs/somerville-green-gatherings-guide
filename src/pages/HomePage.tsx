@@ -941,8 +941,8 @@ const HomePage: React.FC = () => {
             <div className="mb-8">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <img 
-                  src="/images/PlantBased&LocalMenus3_Credits_Canva.webp" 
-                  alt="Various sustainable events" 
+                  src="/images/UsefulFavors_Credits_Canva.webp" 
+                  alt="Useful favors" 
                   className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 />
               </div>
