@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react';
-import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Palette, Music, Package, Camera, MapPin } from 'lucide-react';
+import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Heart, Music, Package, Camera, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
@@ -166,7 +167,7 @@ const VendorsPage: React.FC = () => {
       descriptionEn: "62 Summer St, Somerville MA 02143",
       descriptionEs: "62 Summer St, Somerville MA 02143",
       website: "www.serenitywellnessmassage.com",
-      icon: <Palette size={28} />
+      icon: <Heart size={28} />
     }
   ];
 
