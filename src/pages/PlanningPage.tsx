@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Leaf, Calendar, Users, Truck, Utensils, Palette, MessageSquare } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -67,6 +66,13 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                  <div className="mb-6">
+                    <img 
+                      src="/images/UpcycledReusableDecor&Dishware_Credits_Canva.webp" 
+                      alt="Sustainable venue setup" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">
@@ -124,6 +130,13 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                  <div className="mb-6">
+                    <img 
+                      src="/images/DigitalInvites1_Credits_Canva_SAC.webp" 
+                      alt="Digital invitation example" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">
@@ -173,6 +186,13 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                  <div className="mb-6">
+                    <img 
+                      src="/images/EventWasteManagement_Credits_TheNews&Observers.webp" 
+                      alt="Event waste management" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">
@@ -230,6 +250,13 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                  <div className="mb-6">
+                    <img 
+                      src="/images/PlantBased&LocalMenus1_Credits_Canva.webp" 
+                      alt="Plant-based and local food options" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">

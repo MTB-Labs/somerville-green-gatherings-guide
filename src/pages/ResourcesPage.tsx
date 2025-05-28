@@ -136,6 +136,32 @@ const ResourcesPage: React.FC = () => {
                   </a>
                 </div>
               </div>
+
+              {/* TerraPass Calculator */}
+              <div className="bg-green-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Calculator className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">TerraPass Carbon Footprint Calculator</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Calculate and offset your event's carbon footprint."
+                          spanish="Calcula y compensa la huella de carbono de tu evento."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://terrapass.com/carbon-footprint-calculator/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://terrapass.com/carbon-footprint-calculator/ <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
               
               {/* Green Events Checklist */}
               <div className="bg-green-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -493,6 +519,136 @@ const ResourcesPage: React.FC = () => {
                     className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
                   >
                     https://refed.org <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Harvard Office of Sustainability */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Globe className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Harvard Office of Sustainability</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Resources for sustainable meetings and events."
+                          spanish="Recursos para reuniones y eventos sostenibles."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://sustainable.harvard.edu/resources/meetings-and-events/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://sustainable.harvard.edu/resources/meetings-and-events/ <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Greener By Default */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Globe className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Greener By Default</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Tools and resources for sustainable event planning."
+                          spanish="Herramientas y recursos para la planificación de eventos sostenibles."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://www.greenerbydefault.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://www.greenerbydefault.com/ <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Boston University Sustainability */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Globe className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Boston University Sustainability</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Guide to hosting sustainable events."
+                          spanish="Guía para organizar eventos sostenibles."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://www.bu.edu/sustainability/how-to/host-a-sustainable-event/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://www.bu.edu/sustainability/how-to/host-a-sustainable-event/ <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Recycle Smart MA */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Globe className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Recycle Smart MA</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Massachusetts-specific recycling guidelines and resources."
+                          spanish="Guías y recursos de reciclaje específicos para Massachusetts."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://recyclesmartma.org/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://recyclesmartma.org/ <ExternalLink size={14} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Greenpeace */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <Globe className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Greenpeace Zero Waste Events</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        <BilingualText
+                          english="Guide to organizing zero waste events."
+                          spanish="Guía para organizar eventos de cero residuos."
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://www.greenpeace.org/international/campaigns/organise-a-zero-waste-event/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
+                  >
+                    https://www.greenpeace.org/international/campaigns/organise-a-zero-waste-event/ <ExternalLink size={14} className="ml-1" />
                   </a>
                 </div>
               </div>

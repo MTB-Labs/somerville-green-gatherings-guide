@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Users, Leaf, CheckSquare, ShoppingBag } from 'lucide-react';
@@ -69,6 +68,13 @@ const HomePage: React.FC = () => {
           />
           
           <div className="max-w-3xl mx-auto">
+            <div className="mb-8">
+              <img 
+                src="/images/PlantBased&LocalMenus2_Credits_Canva.webp" 
+                alt="Sustainable event celebration" 
+                className="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
             <BilingualText
               english={
                 <div className="space-y-4">
@@ -485,6 +491,135 @@ const HomePage: React.FC = () => {
                 className="prose prose-green max-w-none"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes an Event Sustainable? */}
+      <section className="py-16 bg-green-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 text-green-500 text-center">
+              <BilingualText
+                english="What Makes an Event Sustainable?"
+                spanish="¿Qué hace que un evento sea sostenible?"
+              />
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <img 
+                  src="/images/BuyLocal_Credits_EdibleBoston_NibbleKitchen.webp" 
+                  alt="Local food and sustainable practices" 
+                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              <div>
+                <img 
+                  src="/images/UsefulFavors_Credits_Canva.webp" 
+                  alt="Sustainable event favors" 
+                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            </div>
+
+            <BilingualText
+              english={
+                <div>
+                  <p>
+                    A sustainable event is one that's planned and carried out in a way that reduces harm to the environment, 
+                    supports the local economy, and includes everyone. It doesn't have to be perfect. It just has to be thoughtful.
+                  </p>
+                  <p>
+                    That might mean skipping single-use plastics, offering vegetarian food, setting up a compost bin, 
+                    or encouraging guests to bike or take the T. These small choices, added up, make a big difference — 
+                    especially when more people in our community start doing them together.
+                  </p>
+                </div>
+              }
+              spanish={
+                <div>
+                  <p>
+                    Un evento sostenible es aquel que se organiza y realiza de forma que reduce el daño al medio ambiente, 
+                    apoya a la economía local e incluye a todas las personas. No tiene que ser perfecto. Solo tiene que ser consciente.
+                  </p>
+                  <p>
+                    Eso puede significar evitar plásticos de un solo uso, ofrecer comida vegetariana, poner un bote de compostaje 
+                    o animar a los invitados a llegar en bici o transporte público. Estas decisiones pequeñas, sumadas, 
+                    hacen una gran diferencia — especialmente cuando más personas en nuestra comunidad las adoptan.
+                  </p>
+                </div>
+              }
+              className="prose prose-green max-w-none"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Types of Events */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 text-green-500 text-center">
+              <BilingualText
+                english="Any Event Can Be Sustainable"
+                spanish="Cualquier evento puede ser sostenible"
+              />
+            </h2>
+
+            <div className="mb-8">
+              <img 
+                src="/images/PlantBased&LocalMenus3_Credits_Canva.webp" 
+                alt="Various sustainable events" 
+                className="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+
+            <BilingualText
+              english={
+                <div>
+                  <p>
+                    Sustainability isn't just for big conferences or corporate events. Any event can be more eco-friendly, including:
+                  </p>
+                  <ul className="grid grid-cols-2 gap-2 mb-4">
+                    <li>Birthday parties</li>
+                    <li>Baby showers</li>
+                    <li>Art openings and exhibitions</li>
+                    <li>Cultural festivals</li>
+                    <li>Weddings</li>
+                    <li>Block parties</li>
+                    <li>Fundraisers</li>
+                    <li>School events</li>
+                    <li>Community meetings</li>
+                  </ul>
+                  <p>
+                    Whether you're planning for 10 people or 10,000, there's always something you can do to make your event more sustainable.
+                  </p>
+                </div>
+              }
+              spanish={
+                <div>
+                  <p>
+                    La sostenibilidad no es solo para conferencias grandes o eventos corporativos. Cualquier evento puede ser más ecológico, como:
+                  </p>
+                  <ul className="grid grid-cols-2 gap-2 mb-4">
+                    <li>Fiestas de cumpleaños</li>
+                    <li>Baby showers</li>
+                    <li>Inauguraciones y exposiciones de arte</li>
+                    <li>Festivales culturales</li>
+                    <li>Bodas</li>
+                    <li>Fiestas vecinales</li>
+                    <li>Recaudaciones de fondos</li>
+                    <li>Eventos escolares</li>
+                    <li>Reuniones comunitarias</li>
+                  </ul>
+                  <p>
+                    No importa si estás organizando para 10 personas o 10,000. Siempre hay algo que puedes hacer para que tu evento sea más sostenible.
+                  </p>
+                </div>
+              }
+              className="prose prose-green max-w-none"
+            />
           </div>
         </div>
       </section>
