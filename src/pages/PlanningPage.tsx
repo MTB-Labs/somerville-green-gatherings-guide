@@ -67,11 +67,13 @@ const PlanningPage: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-6">
-                    <img 
-                      src="/images/UpcycledReusableDecor&Dishware_Credits_Canva.webp" 
-                      alt="Sustainable venue setup" 
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/UpcycledReusableDecor&Dishware_Credits_Canva.webp" 
+                        alt="Sustainable venue setup" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   </div>
                   <BilingualText
                     english={
@@ -131,11 +133,13 @@ const PlanningPage: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-6">
-                    <img 
-                      src="/images/DigitalInvites1_Credits_Canva_SAC.webp" 
-                      alt="Digital invitation example" 
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/Green_Transport.webp" 
+                        alt="Green transport" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   </div>
                   <BilingualText
                     english={
@@ -187,11 +191,13 @@ const PlanningPage: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-6">
-                    <img 
-                      src="/images/EventWasteManagement_Credits_TheNews&Observers.webp" 
-                      alt="Event waste management" 
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/EventWasteManagement_Credits_TheNews&Observers.webp" 
+                        alt="Event waste management" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   </div>
                   <BilingualText
                     english={
@@ -251,11 +257,13 @@ const PlanningPage: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-6">
-                    <img 
-                      src="/images/PlantBased&LocalMenus1_Credits_Canva.webp" 
-                      alt="Plant-based and local food options" 
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/PlantBased&LocalMenus1_Credits_Canva.webp" 
+                        alt="Plant-based and local food options" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   </div>
                   <BilingualText
                     english={
@@ -314,6 +322,15 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                <div className="mb-6">
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/UsefulFavors_Credits_Canva.webp" 
+                        alt="Useful favors" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">
@@ -371,6 +388,15 @@ const PlanningPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="p-6">
+                <div className="mb-6">
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <img 
+                        src="/images/DigitalInvites1_Credits_Canva_SAC.webp" 
+                        alt="Digital invitation example" 
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+                  </div>
                   <BilingualText
                     english={
                       <ul className="space-y-2">
