@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
-import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Heart, Music, Package, Camera, MapPin } from 'lucide-react';
+import { Search, ExternalLink, ShoppingBag, UtensilsCrossed, Leaf, Heart, Music, Package, Camera, MapPin, Building2 } from 'lucide-react';
 import Layout from '../components/Layout';
 import SectionTitle from '../components/SectionTitle';
 import BilingualText from '../components/BilingualText';
 
-type VendorCategory = 'all' | 'catering' | 'photo-video' | 'products' | 'other';
+type VendorCategory = 'all' | 'catering' | 'photo-video' | 'products' | 'venues' | 'other';
 
 const VendorsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -126,6 +125,117 @@ const VendorsPage: React.FC = () => {
       website: "chappyspickles.com",
       icon: <UtensilsCrossed size={28} />
     },
+    // New Catering Vendors
+    {
+      id: 15,
+      nameEn: "Nibble Kitchen",
+      nameEs: "Nibble Kitchen",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way (entrance by 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      descriptionEs: "1 Bow Market Way (entrada por 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      website: "nibblesomerville.com",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 16,
+      nameEn: "Sinta Filipino Cuisine",
+      nameEs: "Sinta Filipino Cuisine",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way (entrance by 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      descriptionEs: "1 Bow Market Way (entrada por 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      website: "www.instagram.com/sintarestaurant",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 17,
+      nameEn: "La Todosantera Guatemalan & Mayan Cuisine",
+      nameEs: "La Todosantera Guatemalan & Mayan Cuisine",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way (entrance by 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      descriptionEs: "1 Bow Market Way (entrada por 345 Somerville Ave.), Union Square, Somerville MA 02143",
+      website: "www.instagram.com/la.todosantera.ramirez",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 18,
+      nameEn: "Nagomi Bento",
+      nameEs: "Nagomi Bento",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way, Somerville, MA 02143",
+      descriptionEs: "1 Bow Market Way, Somerville, MA 02143",
+      website: "www.nagomibento.com",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 19,
+      nameEn: "Elena's Bakery",
+      nameEs: "Elena's Bakery",
+      category: 'catering',
+      descriptionEn: "Online bakery service",
+      descriptionEs: "Servicio de panadería en línea",
+      website: "elenasbakeshop.com",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 20,
+      nameEn: "Taquisimo Tijuana-Style Birria",
+      nameEs: "Taquisimo Tijuana-Style Birria",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way, Somerville, MA 02143",
+      descriptionEs: "1 Bow Market Way, Somerville, MA 02143",
+      website: "www.taquisimotacos.com",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 21,
+      nameEn: "Brazil Green",
+      nameEs: "Brazil Green",
+      category: 'catering',
+      descriptionEn: "Brazilian cuisine",
+      descriptionEs: "Cocina brasileña",
+      website: "www.instagram.com/brazilgreenrestaurant",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 22,
+      nameEn: "Petra Mediterranean Cuisine",
+      nameEs: "Petra Mediterranean Cuisine",
+      category: 'catering',
+      descriptionEn: "1 Bow Market Way, Somerville, MA 02143",
+      descriptionEs: "1 Bow Market Way, Somerville, MA 02143",
+      website: "www.instagram.com/petra_mediterranean_cuisine",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 23,
+      nameEn: "BanglaAdda Bengali Cuisine",
+      nameEs: "BanglaAdda Bengali Cuisine",
+      category: 'catering',
+      descriptionEn: "Bengali cuisine",
+      descriptionEs: "Cocina bengalí",
+      website: "www.instagram.com/bangla.adda",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 24,
+      nameEn: "Dos Manos Kitchen",
+      nameEs: "Dos Manos Kitchen",
+      category: 'catering',
+      descriptionEn: "Catering service",
+      descriptionEs: "Servicio de catering",
+      website: "www.dosmanos.online",
+      icon: <UtensilsCrossed size={28} />
+    },
+    {
+      id: 25,
+      nameEn: "Matki Kulfi Creamery",
+      nameEs: "Matki Kulfi Creamery",
+      category: 'catering',
+      descriptionEn: "3 Marble St, Stoneham, Somerville MA 02180",
+      descriptionEs: "3 Marble St, Stoneham, Somerville MA 02180",
+      website: "www.instagram.com/matki_artisanal_kulfi",
+      icon: <UtensilsCrossed size={28} />
+    },
     // Photo / Video
     {
       id: 11,
@@ -148,6 +258,17 @@ const VendorsPage: React.FC = () => {
       website: "www.instagram.com/picnicandpantrysomerville",
       icon: <Package size={28} />
     },
+    // Event Venues/Spaces
+    {
+      id: 26,
+      nameEn: "Bow Market",
+      nameEs: "Bow Market",
+      category: 'venues',
+      descriptionEn: "Event spaces and venue rentals",
+      descriptionEs: "Espacios para eventos y alquiler de salones",
+      website: "www.bowmarketsomerville.com/eventspaces",
+      icon: <Building2 size={28} />
+    },
     // Other vendors
     {
       id: 13,
@@ -168,6 +289,97 @@ const VendorsPage: React.FC = () => {
       descriptionEs: "62 Summer St, Somerville MA 02143",
       website: "www.serenitywellnessmassage.com",
       icon: <Heart size={28} />
+    },
+    // New Other Services
+    {
+      id: 27,
+      nameEn: "Massachusetts Water Authority",
+      nameEs: "Massachusetts Water Authority",
+      category: 'other',
+      descriptionEn: "Portable water fountain services",
+      descriptionEs: "Servicios de fuentes de agua portátiles",
+      website: "www.mwra.com/projects-programs/public-affairs/portable-water-fountain",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 28,
+      nameEn: "Quench Buggy",
+      nameEs: "Quench Buggy",
+      category: 'other',
+      descriptionEn: "Water trailer rentals and water station rental",
+      descriptionEs: "Alquiler de remolques de agua y estaciones de agua",
+      website: "quenchbuggy.com",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 29,
+      nameEn: "Black Earth Compost",
+      nameEs: "Black Earth Compost",
+      category: 'other',
+      descriptionEn: "Composting services in Somerville",
+      descriptionEs: "Servicios de compostaje en Somerville",
+      website: "blackearthcompost.com",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 30,
+      nameEn: "Garbage to Garden",
+      nameEs: "Garbage to Garden",
+      category: 'other',
+      descriptionEn: "Composting and waste management services",
+      descriptionEs: "Servicios de compostaje y gestión de residuos",
+      website: "garbagetogarden.org",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 31,
+      nameEn: "Union Square Farmers Market",
+      nameEs: "Union Square Farmers Market",
+      category: 'other',
+      descriptionEn: "Local farmers market",
+      descriptionEs: "Mercado de agricultores locales",
+      website: "www.unionsquaremain.org/2025-season",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 32,
+      nameEn: "Somerville Mobile Farmers Market",
+      nameEs: "Somerville Mobile Farmers Market",
+      category: 'other',
+      descriptionEn: "Mobile farmers market service",
+      descriptionEs: "Servicio de mercado móvil de agricultores",
+      website: "www.somervillemobilefarmersmarket.org",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 33,
+      nameEn: "Union Square Main Streets",
+      nameEs: "Union Square Main Streets",
+      category: 'other',
+      descriptionEn: "Local business organization",
+      descriptionEs: "Organización de negocios locales",
+      website: "www.unionsquaremain.org",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 34,
+      nameEn: "East Somerville Main Streets",
+      nameEs: "East Somerville Main Streets",
+      category: 'other',
+      descriptionEn: "149 Broadway, Somerville, MA 02145",
+      descriptionEs: "149 Broadway, Somerville, MA 02145",
+      website: "www.eastsomervillemainstreets.org",
+      icon: <Leaf size={28} />
+    },
+    {
+      id: 35,
+      nameEn: "Bow Market",
+      nameEs: "Bow Market",
+      category: 'other',
+      descriptionEn: "Local market and community space",
+      descriptionEs: "Mercado local y espacio comunitario",
+      website: "www.bowmarketsomerville.com",
+      icon: <Leaf size={28} />
     }
   ];
 
@@ -187,6 +399,7 @@ const VendorsPage: React.FC = () => {
     catering: { en: 'Catering', es: 'Catering' },
     'photo-video': { en: 'Photo & Video', es: 'Foto y Video' },
     products: { en: 'Products', es: 'Productos' },
+    venues: { en: 'Event Venues', es: 'Salones de Eventos' },
     other: { en: 'Other Services', es: 'Otros Servicios' },
   };
 
@@ -195,6 +408,7 @@ const VendorsPage: React.FC = () => {
       case 'catering': return <UtensilsCrossed size={20} />;
       case 'photo-video': return <Camera size={20} />;
       case 'products': return <Package size={20} />;
+      case 'venues': return <Building2 size={20} />;
       case 'other': return <Leaf size={20} />;
       default: return null;
     }
